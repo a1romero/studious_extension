@@ -4,7 +4,7 @@ chrome.alarms.onAlarm.addListener(function(alarm) {
     console.log('Alarm triggered: ', alarm.name);
     chrome.notifications.create({
     type: "basic",
-    iconUrl: "http://www.google.com/favicon.ico",
+    iconUrl: "https://raw.githubusercontent.com/a1romero/studious_extension/refs/heads/main/icons/32.png",
     title: "Pay attention!",
     message: "Smile and nod, smile and nod... even if you don't get it",
     priority: 1
