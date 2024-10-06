@@ -10,4 +10,4 @@ Need to pretend to pay attention in class while sneakily using your computer? Tr
 ## References
 <a target="_blank" href="https://icons8.com/icon/38643/lego-head">Lego Head</a> icon by <a target="_blank" href="https://icons8.com">Icons8</a>
 
-Many many stackoverflow posts, tutorials, etc.
+This project was my attempt to learn how to write an extension. I used lots of stackoverflow posts and tutorials (as well as AI) to help me learn!

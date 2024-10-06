@@ -8,7 +8,7 @@ chrome.runtime.onMessage.addListener((request, sender, sendResponse) => { // mes
                 type: "basic",
                 iconUrl: chrome.runtime.getURL("../icons/48.png"),
                 title: "Pay attention!",
-                message: "Smile and nod, smile and nod... your GPA will thank you",
+                message: "Or at least pretend to...",
                 priority: 1
             });
         console.log("Notification created!")
