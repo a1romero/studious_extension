@@ -1,27 +1,19 @@
-'use strict';
+document.getElementById("start").addEventListener("click", () => { // find start button in the popup.html and wait for a click
+    console.log("Start pressed")
+    const interval = parseFloat(document.getElementById("interval").value); // find interval info and put its value into a variable
+    if (interval > 0){
+        chrome.runtime.sendMessage({action: "startReminder", interval}); // send a message that the service worker should notice
+    }
+});
 
-function setAlarm() {
-    let minutes = parseFloat($("#time").val()) // the amount of time the user wants
-    chrome.alarms.create('reminderAlarm', {
-        periodInMinutes: minutes
-    })
-    window.close()
-}
+document.getElementById("stop").addEventListener("click", () => {
+    chrome.runtime.sendMessage({action: "stopReminder"}); // send a message with stopReminders
+});
 
-$("submit").click(setAlarm) // submit button sets the alarm
-
-$(document).ready(function() {
-    $('#reminderForm').on('submit', function(event) {
-        event.preventDefault(); // Prevent the form from submitting normally
-
-        const time = parseFloat($('#time').val()); // Get the time value
-
-        if (time > 0 && time <= 59) {
-            // Send a message to the background script to set the alarm
-            chrome.runtime.sendMessage({ action: 'setAlarm', time: time * 60 }); // Convert minutes to seconds
-            alert('Alarm set for ' + time + ' minutes');
-        } else {
-            alert('Please enter a valid number of minutes (1-59)');
-        }
-    });
+chrome.notifications.create({
+    type: "basic",
+    iconUrl: chrome.runtime.getURL("../icons/48.png"), // get static path to relative URL
+    title: "Welcome",
+    message: "Make sure to add a notification!",
+    priority: 1 
 });

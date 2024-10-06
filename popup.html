@@ -1,21 +1,25 @@
 <!DOCTYPE html>
 <html>
+    <main class="container">
     <head>
-        <h1>Model Student: reminding you to pretend to pay attention</h1>
+        <h1>studious: reminding you to pay attention</h1>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.min.css">
+        <link rel="stylesheet" href="extra.css">  
     </head>
 
     <body>
-        <form id="reminderForm">
-        <span class="time-text" id="time-text">Reminders every <input type="number" name="time"
-        id="time" value="0.1" max="59" maxlength="2" />minutes</span>
-
-        <div>
-            <input type="submit" value="Update" id="submit" />
-        </div>
-        </form>
+            <h1></h1>
+            <h3>How to use:</h3>
+            <p>
+                add the amount of time you want to be reminded in (we recommend 20), then press "start".
+                once you're done, press "stop" to stop notifications.
+            </p>
+            <h3>Remind me in:</h3>
+        <input type="number" id="interval" placeholder="Minutes between notifications">
+        <button id="start">start</button>
+        <button id="stop">stop</button>
+        
+        <script src="js/popup.js"></script>
     </body>
-
-    <script src="/js/jquery.js"></script>
-    <script src="/js/popup.js"></script>
-
+    </main>
 </html>
