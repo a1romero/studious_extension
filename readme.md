@@ -3,5 +3,7 @@ Need to pretend to pay attention in class while sneakily using your computer? Tr
 ## Using studious
 1. Download this repository.
 2. Make sure you allow notifications from Chrome (check chrome://settings/content/notifications and your machine settings).
-3. Go to chrome://extensions/ and turn 'developer mode' on.
-4. 
+3. Go to chrome://extensions/ and turn "developer mode" on.
+4. Select "Load unpacked" and the select the file containing this repository on your machine.
+5. Open studious in the regular bookmarks bar.
+6. You're all set!
